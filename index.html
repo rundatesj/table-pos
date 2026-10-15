@@ -19,21 +19,9 @@
   </header>
   <main>
     <section id="order-view" class="view active">
-      <div class="table-strip-wrap">
-        <div class="section-heading compact"><div><span class="eyebrow">TABLES</span><h1>테이블을 선택하세요</h1></div><div class="legend"><i></i> 주문 있음</div></div>
-        <div id="table-strip" class="table-strip" aria-label="테이블 목록"></div>
-      </div>
-      <div class="order-grid">
-        <section class="menu-panel panel">
-          <div class="section-heading"><div><span class="eyebrow">MENU</span><h2 id="menu-title">1번 테이블</h2></div><div id="category-tabs" class="segmented" aria-label="메뉴 분류"></div></div>
-          <div id="menu-grid" class="menu-grid"></div>
-        </section>
-        <aside class="cart-panel panel" aria-label="현재 주문">
-          <div class="section-heading"><div><span class="eyebrow">CURRENT ORDER</span><h2><span id="cart-table-number">1</span>번 주문</h2></div><button id="clear-order" class="text-button danger">전체 삭제</button></div>
-          <div id="cart-items" class="cart-items"></div>
-          <div class="cart-summary"><div><span>메뉴 수량</span><strong id="cart-count">0개</strong></div><div class="grand-total"><span>결제 금액</span><strong id="cart-total">0원</strong></div></div>
-          <div class="cart-actions"><button id="split-button" class="button secondary" disabled>1/N 계산</button><button id="checkout-button" class="button primary" disabled>결제 완료</button></div>
-        </aside>
+      <div class="table-board-wrap">
+        <div class="section-heading board-heading"><div><span class="eyebrow">TABLE STATUS</span><h1>테이블 현황</h1><p>테이블을 누르면 주문을 추가하거나 수정할 수 있습니다.</p></div><div class="legend"><i></i> 주문 있음</div></div>
+        <div id="table-board" class="table-board" aria-label="테이블 현황"></div>
       </div>
     </section>
     <section id="admin-view" class="view">
