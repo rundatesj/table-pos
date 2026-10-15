@@ -20,7 +20,7 @@
   <main>
     <section id="order-view" class="view active">
       <div class="table-board-wrap">
-        <div class="section-heading board-heading"><div><span class="eyebrow">TABLE STATUS</span><h1>테이블 현황</h1><p>테이블을 누르면 주문을 추가하거나 수정할 수 있습니다.</p></div><div class="legend"><i></i> 주문 있음</div></div>
+        <div class="section-heading board-heading"><div><span class="eyebrow">TABLE STATUS</span><h1><span id="store-name-title">우리 가게</span> 테이블 현황</h1><p>테이블을 누르면 주문을 추가하거나 수정할 수 있습니다.</p></div><time id="today-date" class="today-date"></time></div>
         <div id="table-board" class="table-board" aria-label="테이블 현황"></div>
       </div>
     </section>
@@ -28,7 +28,7 @@
       <div id="admin-lock" class="lock-card panel"><div class="lock-icon">⌁</div><span class="eyebrow">ADMIN</span><h1>관리자 화면</h1><p>매출 통계와 메뉴 설정은 관리자 PIN으로 보호됩니다.</p><button id="unlock-admin" class="button primary">관리자 PIN 입력</button></div>
       <div id="admin-content" class="admin-content hidden">
         <div class="admin-topbar"><div><span class="eyebrow">ADMIN DASHBOARD</span><h1>매출과 메뉴 관리</h1></div><button id="lock-admin" class="button ghost">잠그기</button></div>
-        <div class="admin-tabs" role="tablist"><button class="admin-tab active" data-admin-tab="stats">월 통계</button><button class="admin-tab" data-admin-tab="menus">메뉴 관리</button><button class="admin-tab" data-admin-tab="backup">백업·복원</button><button class="admin-tab" data-admin-tab="security">보안</button></div>
+        <div class="admin-tabs" role="tablist"><button class="admin-tab active" data-admin-tab="stats">월 통계</button><button class="admin-tab" data-admin-tab="menus">메뉴 관리</button><button class="admin-tab" data-admin-tab="backup">백업·복원</button><button class="admin-tab" data-admin-tab="security">설정·보안</button></div>
         <section id="stats-tab" class="admin-panel active">
           <div class="filter-row"><label>조회 월 <input id="stats-month" type="month"></label><span class="muted">결제 완료 기준</span></div>
           <div class="metric-grid">
@@ -52,6 +52,7 @@
           <div class="backup-status panel inner-panel"><span>최근 백업</span><strong id="last-backup">아직 백업하지 않았습니다</strong></div>
         </section>
         <section id="security-tab" class="admin-panel">
+          <form id="store-settings-form" class="panel inner-panel store-settings-card"><div><h2>매장 정보</h2><p class="muted">입력한 상호명이 테이블 현황 상단에 표시됩니다.</p></div><label class="form-field"><span>상호명</span><input id="store-name-input" maxlength="30" placeholder="예: 불나다 포차" required></label><button class="button primary" type="submit">상호명 저장</button></form>
           <div class="panel inner-panel security-card"><div><h2>관리자 PIN 변경</h2><p class="muted">6자리 숫자로 설정합니다. PIN 원문은 저장되지 않습니다.</p></div><button id="change-pin" class="button secondary">PIN 변경</button></div>
           <div class="panel inner-panel security-card"><div><h2>이 기기의 데이터</h2><p class="muted">주문과 매출은 이 브라우저에만 저장됩니다.</p></div><button id="reset-data" class="button danger-outline">전체 데이터 초기화</button></div>
         </section>
